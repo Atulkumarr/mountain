@@ -1,0 +1,257 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html,
+body {
+  height: 100%;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #ffffff;
+  background-color: #0b1d26;
+  scroll-behavior: smooth;
+}
+::selection {
+  color: #fbd784;
+  background-color: transparent;
+}
+/* classes used frequently  */
+.fix-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* header section */
+header {
+  min-height: 700px;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  position: relative;
+  padding-top: 2rem;
+}
+nav .account a {
+  color: white;
+  transition: all 0.2s ease-in;
+}
+nav .account a:hover {
+  word-spacing: 5px;
+}
+.banner-img img {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+}
+
+.banner-img img:nth-child(1) {
+  top: 0px;
+}
+
+.banner-img img:nth-child(2) {
+  top: 30%;
+}
+
+.banner-img img:nth-child(3) {
+  top: 50%;
+  z-index: 2;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  width: 50%;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+}
+.banner-text h2 {
+  font-size: 1rem;
+  color: #fbd784;
+  letter-spacing: 2px;
+  margin-left: 12%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.banner-text h2::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  left: -12%;
+  top: 9px;
+  height: 3px;
+  background-color: #fbd784;
+}
+.banner-text h1 {
+  text-shadow: 2px 2px silver;
+  margin-bottom: 1rem;
+  font-family: "Noto Serif Display", serif;
+}
+.banner-text a {
+  color: white;
+}
+/* get stared section */
+.similar-box {
+  padding-bottom: 1.3rem;
+  margin-bottom: 2rem;
+}
+.gs {
+  z-index: 3;
+  position: relative;
+  padding-top: 18%;
+}
+.similar-box .text-box {
+  width: 45%;
+}
+.similar-box .text-box .min-heading::before {
+  content: "";
+  position: absolute;
+  width: 12%;
+  left: -15%;
+  top: 7px;
+  height: 2px;
+  background-color: #fbd784;
+}
+.similar-box .text-box .min-heading {
+  color: #fbd784;
+  margin-left: 13%;
+  position: relative;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.1rem;
+}
+
+.similar-box .text-box .min-heading::after {
+  content: "01";
+  position: absolute;
+  left: -25%;
+  font-size: 8rem;
+  top: -4rem;
+  color: #ffffff;
+  opacity: 0.4;
+  z-index: -1;
+}
+.similar-box .text-box .heading {
+  font-family: "Noto Serif Display", serif;
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+}
+.similar-box .text-box p {
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+.similar-box .text-box a {
+  font-size: 0.9rem;
+  color: #fbd784;
+  transition: all 0.3s ease-in;
+}
+.similar-box .text-box a:hover {
+  letter-spacing: 2px;
+}
+.similar-box .img-box {
+  width: 40%;
+  overflow: hidden;
+}
+.similar-box .img-box:hover img {
+  transform: scale(1.2);
+}
+.similar-box .img-box img {
+  transition: all 0.3s ease-in;
+  width: 100%;
+}
+.hs,
+.us {
+  z-index: 5;
+  position: relative;
+}
+.hs .text-box .min-heading::after {
+  content: "02";
+}
+.us .text-box .min-heading::after {
+  content: "03";
+}
+
+footer {
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+footer a {
+  color: white;
+  transition: all 0.3s ease-in;
+}
+footer a:hover {
+  color: #fbd784;
+  transition: all 0.3s ease-in;
+}
+
+@media (max-width: 750px) {
+  .similar-box {
+    padding-bottom: 3rem;
+  }
+  .similar-box .text-box,
+  .img-box {
+    width: 85%;
+    margin: 10px auto;
+  }
+  .banner-text h1 {
+    font-size: 1.2rem;
+    /* top: 16%; */
+  }
+  .hs .img-box {
+    order: 2;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+  header {
+    min-height: 400px;
+  }
+  .banner-text {
+    display: none;
+  }
+  .banner-text h1 {
+    text-shadow: none;
+  }
+  .banner-text a {
+    display: none;
+  }
+  .banner-img img:nth-child(2) {
+    top: 15%;
+  }
+  .banner-img img:nth-child(3) {
+    top: 30%;
+  }
+  .gs {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logo img {
+    width: 61%;
+  }
+  nav .account a {
+    font-size: 1rem;
+  }
+  .similar-box .img-box {
+    width: 70%;
+  }
+}
